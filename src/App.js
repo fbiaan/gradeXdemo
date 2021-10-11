@@ -11,6 +11,8 @@ import Product from "./pages/product/Product";
 import NewProduct from "./pages/newProduct/NewProduct";
 import Ranking from "./pages/ranking/Ranking";
 import Overview from "./pages/overview/Overview";
+import CompSearch from "./pages/companySearch/CompanySearch"
+import NewCompSearch from "./pages/companySearch/cmpSearch"
 
 function App() {
   return (
@@ -46,6 +48,14 @@ function App() {
           <Route path="/newproduct">
             <NewProduct />
           </Route>
+          <Route path="/compsearch">
+            <CompSearch />
+          </Route>
+          <Route path="/newcompsearch">
+            <NewCompSearch />
+          </Route>
+
+          
         </Switch>
       </div>
     </Router>

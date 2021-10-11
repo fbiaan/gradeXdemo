@@ -57,10 +57,12 @@ export default function Sidebar() {
                 Compare companies
               </li>
             </Link>
-            <li className="sidebarListItem">
-              <AttachMoney className="sidebarIcon" />
-              Transactions
-            </li>
+            <Link to="/compsearch" className="link">
+              <li className="sidebarListItem">
+                <AttachMoney className="sidebarIcon" />
+                Transactions
+              </li>
+            </Link>
             <li className="sidebarListItem">
               <BarChart className="sidebarIcon" />
               Reports
@@ -70,10 +72,12 @@ export default function Sidebar() {
         <div className="sidebarMenu">
           <h3 className="sidebarTitle">Notifications</h3>
           <ul className="sidebarList">
+          <Link to="/newcompsearch" className="link">
             <li className="sidebarListItem">
               <MailOutline className="sidebarIcon" />
               Mail
             </li>
+            </Link>
             <li className="sidebarListItem">
               <DynamicFeed className="sidebarIcon" />
               Feedback
