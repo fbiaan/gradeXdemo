@@ -13,8 +13,8 @@ import Ranking from "./pages/ranking/Ranking";
 import Overview from "./pages/overview/Overview";
 import CompSearch from "./pages/companySearch/CompanySearch"
 import NewCompSearch from "./pages/companySearch/cmpSearch"
-import Company from "./pages/company/Company"
-import Splash from "./pages/company/SplashScreen"
+
+import Splash from "./pages/company/NewComp"
 import CompareCompanies from "./pages/compareCompanies/CompCompanies"
 import Rankinglist from "./pages/ranking/Rankinglist"
 
@@ -57,9 +57,6 @@ function App() {
           </Route>
           <Route path="/newcompsearch">
             <NewCompSearch />
-          </Route>
-          <Route path="/company">
-            <Company />
           </Route>
           <Route path="/splash/:productId">
             <Splash />
