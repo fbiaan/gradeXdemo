@@ -1,4 +1,4 @@
-import "./userList.css";
+import "./rankinglist.css";
 import React, {useState, useEffect} from 'react'
 import {DataGrid} from '@material-ui/data-grid'
 //import MaterialTable from "material-table";
@@ -8,13 +8,13 @@ const columns = [
   
   //getRowId={(row) => row._id}
   {field: 'company_id', headerName: 'ID'},
-  {field: 'company_name', headerName: 'Title', width: 200},
-  {field: 'web_site', headerName: 'web', width: 200},
-  {field: 'score', headerName: 'score', width: 150, sorteable: 'asc'},
+  {field: 'company_name', headerName: 'Company', width: 200},
+  {field: 'country', headerName: 'Country', width: 100},
+  {field: 'score', headerName: 'Score', width: 100, sorteable: 'asc'},
   {
     field: "logo_file",
     headerName: "Logo",
-    width: 200,
+    width: 150,
     renderCell: (params) => {
       return (
         <div className="userListUser">
@@ -46,8 +46,8 @@ const DataTable = () => {
   //const [usuarios, setUsuarios]= useState([]);
 
  useEffect(() => {
-   //fetch("http://localhost:8080/democompany/listar")
-   fetch("http://168.181.186.118:9093/democompany/listar")
+   fetch("http://localhost:8080/democompany/ranking20")
+   //fetch("http://168.181.186.118:9093/democompany/listar")
    
     .then((data) => data.json())
     .then((data) => setTableData(data))
@@ -59,7 +59,7 @@ const DataTable = () => {
   return (
     
     
-    <div style={{height: 700, width: '100%'}}>
+    <div style={{height: 600, width: '100%'}}>
       <div>
         <h1>Ranking company</h1>
       </div>
@@ -68,7 +68,7 @@ const DataTable = () => {
         getRowId={(r) => r.company_id}
         rows={tableData}
         columns={columns}
-        pageSize={12}
+        pageSize={20}
         checkboxSelection
 
       />

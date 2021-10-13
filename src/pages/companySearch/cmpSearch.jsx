@@ -8,9 +8,13 @@ import { Link } from "react-router-dom";
     const [data, setData]= useState([]);
     const columns= [
         { title: 'COMPANY', field: 'company_name' },
+        { title: 'Total Funding Amount', field: 'tfa' },
+        { title: 'Number of Acquisition', field: 'noa' },
         { title: 'WEB SITE', field: 'web_site' },
+        
         //{ title: "Profile", render:rowData=><Link to={'/overview'}>Profile</Link>},
-        { title: "Profile", render:rowData=><Link to={'/product/'+ rowData.company_id}>Profile</Link>},
+        //{ title: "Profile", render:rowData=><Link to={'/product/'+ rowData.company_id}>Profile</Link>},
+        { title: "Detail", render:rowData=><Link to={'/splash/'+ rowData.company_id}>Detail</Link>},
         //{ title: 'Género(s)', field: 'genero' },
         //{ title: 'Ventas Estimadas (millones)', field: 'ventas', type: 'numeric'}
       ];
@@ -33,14 +37,14 @@ import { Link } from "react-router-dom";
 
     
      return(
-         <div className="newSearch">
-             <h2>Search new</h2>
+            <div className="newSearch">
+             <h2>Overview</h2>
             <div >
             
             <MaterialTable
             columns={columns}
             data={data}
-            title="Company List" 
+            title="Company List Search" 
             />
           </div>
          </div>

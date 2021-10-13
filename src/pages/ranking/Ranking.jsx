@@ -1,6 +1,7 @@
 import "./ranking.css";
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import {DataGrid} from '@material-ui/data-grid'
 
 
 import {
@@ -19,10 +20,10 @@ import {
 
 export default function RankingCountry() {
 const [paises, setData]= useState([]);
-
+const [tableData, setTableData] = useState([]);
 //const baseUrl="http://localhost:8080/democompany/ranking";
-const baseUrl="http://168.181.186.118:9093/democompany/ranking";
-
+//const baseUrl="http://168.181.186.118:9093/democompany/ranking";
+const baseUrl="http://localhost:8080/democompany/ranking20"
 //const baseUrl2="http://localhost:8080/democompany/buscaxid/5";
 //console.log (baseUrl2);
 const peticionGet=async()=>{
@@ -39,57 +40,17 @@ const peticionGet=async()=>{
     peticionGet();
   }, [])
 
-
-
-const data = [
-  {
-    name: 'Page A',
-    uv: 590,
-    pv: 800,
-    amt: 1400,
-  },
-  {
-    name: 'Page B',
-    uv: 868,
-    pv: 967,
-    amt: 1506,
-  },
-  {
-    name: 'Page C',
-    uv: 1397,
-    pv: 1098,
-    amt: 989,
-  },
-  {
-    name: 'Page D',
-    uv: 1480,
-    pv: 1200,
-    amt: 1228,
-  },
-  {
-    name: 'Page E',
-    uv: 1520,
-    pv: 1108,
-    amt: 1100,
-  },
-  {
-    name: 'Page F',
-    uv: 1400,
-    pv: 680,
-    amt: 1700,
-  },
-];
-
-
+  
     return (
       <div className="ranking">
-          rankings
+        
+          Ranking TOP 20   _
           <img src="https://insyteglobal.com/wp-content/uploads/2020/05/logo-insyte-global-small.png" alt=""  />
-          <ResponsiveContainer width="100%" aspect={3 / 1}>
+          <ResponsiveContainer width="100%" aspect={1 / 1}>
 
               <ComposedChart
               layout="vertical"
-              width={500}
+              width={400}
               height={400}
               data={paises}
               margin={{
@@ -101,7 +62,7 @@ const data = [
             >
               <CartesianGrid stroke="#f5f5f5" />
               <XAxis type="number" />
-              <YAxis dataKey="country" type="category" scale="band" />
+              <YAxis dataKey="company_name" type="category" scale="band" />
               <Tooltip />
               <Legend />
               
@@ -111,8 +72,9 @@ const data = [
 
           
         </ResponsiveContainer>
-      </div>
-        
-   
+      
+      
+      
+     </div>
     );
   }

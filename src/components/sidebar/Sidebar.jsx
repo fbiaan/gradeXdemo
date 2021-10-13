@@ -20,27 +20,57 @@ export default function Sidebar() {
     <div className="sidebar">
       <div className="sidebarWrapper">
         <div className="sidebarMenu">
-          <h3 className="sidebarTitle">Quick Menu</h3>
+          <h3 className="sidebarTitle">Companies</h3>
+        </div>  
+        <div className="sidebarMenu">
+          <h3 className="sidebarTitle">Contacs</h3>
+        </div>  
+        <div className="sidebarMenu">
+          <h3 className="sidebarTitle">Investment</h3>
           <ul className="sidebarList">
-            <Link to="/overview" className="link">
+            <Link to="/newcompsearch" className="link">
             <li className="sidebarListItem active">
               <LineStyle className="sidebarIcon" />
-              Overview
+                Overview
             </li>
+            </Link>
+            <Link to="/compcompanies" className="link">
+              <li className="sidebarListItem">
+                <Storefront className="sidebarIcon" />
+                Compare companies
+              </li>
             </Link>
             <Link to="/ranking" className="link">
             <li className="sidebarListItem">
               <BarChart className="sidebarIcon" />
-              Rankings
+              Ranking Chart
+            </li>
+            </Link>
+            <Link to="/rankinglist" className="link">
+            <li className="sidebarListItem">
+              <BarChart className="sidebarIcon" />
+              Ranking List
             </li>
             </Link>
             <Link to="/" className="link">
             <li className="sidebarListItem">
               <TrendingUp className="sidebarIcon" />
-              Sales
+              Lead Assesment
             </li>
             </Link>
           </ul>
+        </div>
+        <div className="sidebarMenu">
+          <h3 className="sidebarTitle">Teck Stack</h3>
+        </div>
+        <div className="sidebarMenu">
+          <h3 className="sidebarTitle">Digital Performance</h3>
+        </div>
+        <div className="sidebarMenu">
+          <h3 className="sidebarTitle">Talent</h3>
+        </div>
+        <div className="sidebarMenu">
+          <h3 className="sidebarTitle">----------</h3>
         </div>
         <div className="sidebarMenu">
           <h3 className="sidebarTitle">Future</h3>
@@ -51,12 +81,7 @@ export default function Sidebar() {
                 Intelligence
               </li>
             </Link>
-            <Link to="/products" className="link">
-              <li className="sidebarListItem">
-                <Storefront className="sidebarIcon" />
-                Compare companies
-              </li>
-            </Link>
+            
             <Link to="/compsearch" className="link">
               <li className="sidebarListItem">
                 <AttachMoney className="sidebarIcon" />
@@ -67,30 +92,24 @@ export default function Sidebar() {
               <BarChart className="sidebarIcon" />
               Reports
             </li>
-          </ul>
-        </div>
-        <div className="sidebarMenu">
-          <h3 className="sidebarTitle">Notifications</h3>
-          <ul className="sidebarList">
-          <Link to="/newcompsearch" className="link">
+            <Link to="/overview" className="link">
             <li className="sidebarListItem">
               <MailOutline className="sidebarIcon" />
               Mail
             </li>
             </Link>
+            <Link to="/company" className="link">
             <li className="sidebarListItem">
               <DynamicFeed className="sidebarIcon" />
               Feedback
             </li>
+            </Link>
+            <Link to="/products" className="link">
             <li className="sidebarListItem">
               <ChatBubbleOutline className="sidebarIcon" />
               Messages
             </li>
-          </ul>
-        </div>
-        <div className="sidebarMenu">
-          <h3 className="sidebarTitle">Staff</h3>
-          <ul className="sidebarList">
+            </Link>
             <li className="sidebarListItem">
               <WorkOutline className="sidebarIcon" />
               Manage
@@ -105,7 +124,7 @@ export default function Sidebar() {
             </li>
           </ul>
         </div>
-      </div>
+        </div>
     </div>
   );
 }
