@@ -22,8 +22,8 @@ export default function RankingCountry() {
 const [paises, setData]= useState([]);
 const [tableData, setTableData] = useState([]);
 //const baseUrl="http://localhost:8080/democompany/ranking";
-//const baseUrl="http://168.181.186.118:9093/democompany/ranking";
-const baseUrl="http://localhost:8080/democompany/ranking20"
+const baseUrl="http://168.181.186.118:9093/democompany/ranking20";
+//const baseUrl="http://localhost:8080/democompany/ranking20"
 //const baseUrl2="http://localhost:8080/democompany/buscaxid/5";
 //console.log (baseUrl2);
 const peticionGet=async()=>{

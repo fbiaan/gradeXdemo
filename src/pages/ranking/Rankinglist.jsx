@@ -30,7 +30,7 @@ const columns = [
     renderCell: (params) => {
       return (
         <>
-          <Link to={"/user/" + params.row.id}>
+          <Link to={"/splash/" + params.row.company_id}>
             <button className="userListEdit">Edit</button>
           </Link>         
         </>
@@ -46,7 +46,8 @@ const DataTable = () => {
   //const [usuarios, setUsuarios]= useState([]);
 
  useEffect(() => {
-   fetch("http://localhost:8080/democompany/ranking20")
+   //fetch("http://localhost:8080/democompany/ranking20")
+   fetch("http://168.181.186.118:9093/democompany/ranking20")
    //fetch("http://168.181.186.118:9093/democompany/listar")
    
     .then((data) => data.json())

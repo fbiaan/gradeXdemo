@@ -109,19 +109,7 @@ export default function Sidebar() {
               <ChatBubbleOutline className="sidebarIcon" />
               Messages
             </li>
-            </Link>
-            <li className="sidebarListItem">
-              <WorkOutline className="sidebarIcon" />
-              Manage
-            </li>
-            <li className="sidebarListItem">
-              <Timeline className="sidebarIcon" />
-              Analytics
-            </li>
-            <li className="sidebarListItem">
-              <Report className="sidebarIcon" />
-              Reports
-            </li>
+            </Link>            
           </ul>
         </div>
         </div>
