@@ -102,9 +102,21 @@ export default function Sidebar() {
         </div>
         <div className="sidebarMenu">
           <h3 className="sidebarTitle">Digital Performance</h3>
+          <Link to="/digiSearch" className="link">
+            <li className="sidebarListItem active">
+              <LineStyle className="sidebarIcon" />
+                Overview
+            </li>
+            </Link>
         </div>
         <div className="sidebarMenu">
           <h3 className="sidebarTitle">Talent</h3>
+          <Link to="/talentSearch" className="link">
+            <li className="sidebarListItem active">
+              <LineStyle className="sidebarIcon" />
+                Overview
+            </li>
+            </Link>
         </div>
         <div className="sidebarMenu">
           <h3 className="sidebarTitle">----------</h3>

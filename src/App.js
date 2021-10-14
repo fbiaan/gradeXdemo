@@ -25,6 +25,12 @@ import OverInvesLnk from "./pages/investment/OverInves"
 import SearchTeck from "./pages/TeckStack/SearchTeck"
 import OverTeck from "./pages/TeckStack/OverTeck"
 
+import SearchDigi from "./pages/digital/SearchDigital"
+import OverDigi from "./pages/digital/OverDigital"
+
+import SearchTalent from "./pages/talent/SearchTalent"
+import OverTalent from "./pages/talent/OverTalent"
+
 function App() {
   return (
     <Router>
@@ -94,6 +100,19 @@ function App() {
             <OverTeck/>
           </Route>
 
+          <Route path="/digiSearch">
+            <SearchDigi/>
+          </Route>
+          <Route path="/overdigi/:productId">
+            <OverDigi/>
+          </Route>
+
+          <Route path="/talentSearch">
+            <SearchTalent/>
+          </Route>
+          <Route path="/overtalent/:productId">
+            <OverTalent/>
+          </Route>
 
 
         </Switch>

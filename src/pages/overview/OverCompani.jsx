@@ -1,3 +1,4 @@
+import "./overCompani.css"
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import MaterialTable from "material-table";
@@ -55,15 +56,35 @@ function OverComp() {
         <img src={linea} width="400" height ="20"/>
         <img src={company.logo_file} border="1" alt="Logo empresa" width="200" height="100"></img>
         <h1>COMPANY : {company.COMPANY_NAME}</h1>
-        <h2>{company.COMPANY_ID}</h2>
-        
+        <h3>{company.COMPANY_ID}</h3>
+
+                <div>
+                    <table className="styled-table">
+                        <thead >
+                            <tr className= "styled-table">
+                                <th>INFO</th>
+                                <th>DATA</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {
+                                inves.map((d) =>{
+                                    return (
+                                        <tr>
+                                            <td>{d.OUTPUT_NAME}</td>
+                                            <td>{d.VALUE}</td>                                            
+                                        </tr>
+                                    )
+                                } )  
+                            }
+                        </tbody>
+                    </table>
+                </div>
+
                  <div>
 
-                <MaterialTable
-                columns={columns}
-                data={inves}
-                title="Investment" 
-                />
+
                 </div>        
         </div>
     );

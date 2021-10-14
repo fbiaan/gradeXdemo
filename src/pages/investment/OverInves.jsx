@@ -1,4 +1,4 @@
-
+import "./overInves.css"
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import MaterialTable from "material-table";
@@ -59,15 +59,31 @@ function OverInves() {
         <h1>COMPANY : {company.COMPANY_NAME}</h1>
         <h2>{company.COMPANY_ID}</h2>
         
-        
         <div>
+                    <table className="styled-table">
+                        <thead >
+                            <tr className= "styled-table">
+                                <th>INFO</th>
+                                <th>DATA</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {
+                                inves.map((d) =>{
+                                    return (
+                                        <tr>
+                                            <td>{d.OUTPUT_NAME}</td>
+                                            <td>{d.VALUE}</td>                                            
+                                        </tr>
+                                    )
+                                } )  
+                            }
+                        </tbody>
+                    </table>
+                </div>
+        
 
-            <MaterialTable
-            columns={columns}
-            data={inves}
-            title="Investment" 
-            />
-        </div>
         </div>
     );
 

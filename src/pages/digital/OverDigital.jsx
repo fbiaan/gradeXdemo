@@ -1,3 +1,4 @@
+import "./overDigital.css"
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import MaterialTable from "material-table";
@@ -6,7 +7,7 @@ import { useParams } from 'react-router-dom';
 import linea from './imgcom/banda3colores.JPG'
 
 
-function OverTeck() {
+function OverDigital() {
     const {productId} = useParams();
     console.log({productId})
     const [company, setData]= useState([]);
@@ -29,8 +30,8 @@ function OverTeck() {
     }, [])
 
     const [teck, setInves]= useState([]);
-//    const baseUrl2="http://localhost:8080/democompany/teckover?idcom=" + productId;
-    const baseUrl2="http://168.181.186.118:9093/democompany/teckover?idcom=" + productId;
+    const baseUrl2="http://localhost:8080/democompany/digiover?idcom=" + productId;
+//    const baseUrl2="http://168.181.186.118:9093/democompany/digiover?idcom=" + productId;
 
     const peticionGet2=async()=>{
         await axios.get(baseUrl2)
@@ -53,12 +54,12 @@ function OverTeck() {
 
     return (
         <div className="user">
-            <h3>Teck Stack - Overview (Selected)</h3>
+            <h3>Digital Performance3 - Overview (Selected)</h3>
         <img src={linea} width="400" height ="20"/>
         <img src={company.logo_file} border="1" alt="Logo empresa" width="200" height="100"></img>
         <h1>COMPANY : {company.COMPANY_NAME}</h1>
         <h2>{company.COMPANY_ID}</h2>
-
+        
         <div>
                     <table className="styled-table">
                         <thead >
@@ -81,11 +82,11 @@ function OverTeck() {
                             }
                         </tbody>
                     </table>
-                </div>        
+                </div>
         </div>
     );
 
 };
 
 
-export default OverTeck;
+export default OverDigital;
