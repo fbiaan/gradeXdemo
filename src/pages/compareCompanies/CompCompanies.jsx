@@ -17,7 +17,8 @@ export default function ProductList() {
         { title: 'COMPANY', field: 'COMPANY_NAME', width : "200" },
         
     ];
-    const baseUrl="http://localhost:8080/democompany/allcomp";
+    //const baseUrl="http://localhost:8080/democompany/allcomp";
+    const baseUrl="http://168.181.186.118:9093/democompany/allcomp";
     const peticionGet=async()=>{
         await axios.get(baseUrl)
         .then(response=>{
@@ -46,7 +47,7 @@ export default function ProductList() {
                 onRowClick={((evt, selectedRow) => setSelectedRow(selectedRow.tableData.id))}
                 options={{
                     rowStyle: rowData => ({
-                    backgroundColor: (selectedRow === rowData.tableData.id) ? '#EEE' : '#FFF'
+                    backgroundColor: (selectedRow === rowData.tableData.id) ? '#01579b' : '#FFF'
                     })
                 }}
                 />

@@ -20,8 +20,8 @@ import { Link } from "react-router-dom";
       ];
       //const baseUrl="http://168.181.186.118:9093/democompany/listar";
     //const baseUrl="http://localhost:8080/democompany/listar";
-    const baseUrl="http://localhost:8080/democompany/allcomp";
-
+    //const baseUrl="http://localhost:8080/democompany/allcomp";
+    const baseUrl="http://168.181.186.118:9093/democompany/allcomp";
     const peticionGet=async()=>{
         await axios.get(baseUrl)
         .then(response=>{
@@ -39,7 +39,7 @@ import { Link } from "react-router-dom";
     
      return(
             <div className="newSearch">
-             <h2>Overview</h2>
+             <h2>Companies - Overview (selected)</h2>
             <div >
             
             <MaterialTable

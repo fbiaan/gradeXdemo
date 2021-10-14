@@ -10,10 +10,10 @@ function OverTeck() {
     const {productId} = useParams();
     console.log({productId})
     const [company, setData]= useState([]);
-    //const baseUrl="http://168.181.186.118:9093/democompany/buscaxid/15";
-    //const baseUrl="http://168.181.186.118:9093/democompany/buscaxid/" + productId;
-    const baseUrl="http://localhost:8080/democompany/onecompani?idcom=" + productId;
-    //const baseUrl="http://localhost:8080/democompany/buscaxid/" + productId;
+    
+    //const baseUrl="http://localhost:8080/democompany/onecompani?idcom=" + productId;
+    const baseUrl="http://168.181.186.118:9093/democompany/onecompani?idcom=" + productId;
+    
     const peticionGet=async()=>{
         await axios.get(baseUrl)
         .then(response=>{
@@ -29,10 +29,9 @@ function OverTeck() {
     }, [])
 
     const [teck, setInves]= useState([]);
-    //const baseUrl="http://168.181.186.118:9093/democompany/buscaxid/15";
-    //const baseUrl="http://168.181.186.118:9093/democompany/buscaxid/" + productId;
-    const baseUrl2="http://localhost:8080/democompany/teckover?idcom=" + productId;
-    //const baseUrl="http://localhost:8080/democompany/buscaxid/" + productId;
+//    const baseUrl2="http://localhost:8080/democompany/teckover?idcom=" + productId;
+    const baseUrl2="http://168.181.186.118:9093/democompany/teckover?idcom=" + productId;
+
     const peticionGet2=async()=>{
         await axios.get(baseUrl2)
         .then(response=>{

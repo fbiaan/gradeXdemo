@@ -18,9 +18,9 @@ import { Link } from "react-router-dom";
         //{ title: 'Género(s)', field: 'genero' },
         //{ title: 'Ventas Estimadas (millones)', field: 'ventas', type: 'numeric'}
       ];
-      //const baseUrl="http://168.181.186.118:9093/democompany/listar";
+    const baseUrl="http://168.181.186.118:9093/democompany/allcomp";
     //const baseUrl="http://localhost:8080/democompany/listar";
-    const baseUrl="http://localhost:8080/democompany/allcomp";
+    //const baseUrl="http://localhost:8080/democompany/allcomp";
 
     const peticionGet=async()=>{
         await axios.get(baseUrl)
