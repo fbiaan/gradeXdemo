@@ -16,10 +16,6 @@ export default function Topbar() {
         </Link>  
         </div>
 
-        <div>
-          <h2>Companies</h2>
-        </div>
-
         <div className="topRight">
           <div className="topbarIconContainer">
             <NotificationsNone />

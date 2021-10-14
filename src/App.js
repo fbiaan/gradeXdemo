@@ -22,6 +22,8 @@ import OverCompLnk from "./pages/overview/OverCompani"
 import SearchInves from "./pages/investment/SearchInves"
 import OverInvesLnk from "./pages/investment/OverInves"
 
+import SearchTeck from "./pages/TeckStack/SearchTeck"
+import OverTeck from "./pages/TeckStack/OverTeck"
 
 function App() {
   return (
@@ -83,6 +85,13 @@ function App() {
           </Route>
           <Route path="/overinves/:productId">
             <OverInvesLnk/>
+          </Route>
+
+          <Route path="/teckSearch">
+            <SearchTeck/>
+          </Route>
+          <Route path="/overteck/:productId">
+            <OverTeck/>
           </Route>
 
 

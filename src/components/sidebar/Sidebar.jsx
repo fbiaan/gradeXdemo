@@ -41,10 +41,7 @@ export default function Sidebar() {
             </li>
             </Link>
           </ul>
-        </div>  
-        <div className="sidebarMenu">
-          <h3 className="sidebarTitle">Contacs</h3>
-        </div>  
+        </div>    
         <div className="sidebarMenu">
           <h3 className="sidebarTitle">Investment</h3>
           <ul className="sidebarList">
@@ -82,6 +79,26 @@ export default function Sidebar() {
         </div>
         <div className="sidebarMenu">
           <h3 className="sidebarTitle">Teck Stack</h3>
+            <ul className="sidebarList">
+              <Link to="/teckSearch" className="link">
+              <li className="sidebarListItem active">
+                <LineStyle className="sidebarIcon" />
+                  Overview
+              </li>
+              </Link>
+              <Link to="/compcompanies" className="link">
+                <li className="sidebarListItem">
+                  <Storefront className="sidebarIcon" />
+                  Compare companies
+                </li>
+              </Link>
+              <Link to="/ranking" className="link">
+              <li className="sidebarListItem">
+                <BarChart className="sidebarIcon" />
+                Ranking Char
+              </li>
+              </Link>
+            </ul>          
         </div>
         <div className="sidebarMenu">
           <h3 className="sidebarTitle">Digital Performance</h3>
