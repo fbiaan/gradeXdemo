@@ -1,19 +1,20 @@
-import "./cmpSearch.css";
+import "./searcinves.css";
 import React, { useState, useEffect } from 'react';
 import MaterialTable from "material-table";
 import axios from 'axios';
 import { Link } from "react-router-dom";
 
- export default function CmpSearch() {
-    const [data, setData]= useState([]);
+ export default function InvesSearch() {
+    const [data1, setData]= useState([]);
     const columns= [
-        { title: 'COMPANY', field: 'company_name' },
-        { title: 'logo', field: 'logo file' },
-        { title: 'WEB founders', field: 'FOUNDERS' },
+        { title: 'COMPANY', field: 'COMPANY_NAME' },
+        { title: 'logo', field: 'LOGO_FILE' },
+        //{ title: 'Number of Acquisition', field: 'noa' },
+        //{ title: 'WEB SITE', field: 'web_site' },
         
         //{ title: "Profile", render:rowData=><Link to={'/overview'}>Profile</Link>},
         //{ title: "Profile", render:rowData=><Link to={'/product/'+ rowData.company_id}>Profile</Link>},
-        { title: "Detail", render:rowData=><Link to={'/splash/'+ rowData.company_id}>Detail</Link>},
+        { title: "Detail", render:rowData=><Link to={'/overinves/'+ rowData.COMPANY_ID}>Detail</Link>},
         //{ title: 'Género(s)', field: 'genero' },
         //{ title: 'Ventas Estimadas (millones)', field: 'ventas', type: 'numeric'}
       ];
@@ -24,8 +25,8 @@ import { Link } from "react-router-dom";
     const peticionGet=async()=>{
         await axios.get(baseUrl)
         .then(response=>{
-         console.log(response.data);
-         setData(response.data);
+         console.log(response.data.return);
+         setData(response.data.return);
         }).catch(error=>{
           console.log(error);
         })
@@ -38,12 +39,12 @@ import { Link } from "react-router-dom";
     
      return(
             <div className="newSearch">
-             <h2>Overview</h2>
+             <h2>Investment</h2>
             <div >
             
             <MaterialTable
             columns={columns}
-            data={data}
+            data={data1}
             title="Company List Search" 
             />
           </div>

@@ -21,6 +21,26 @@ export default function Sidebar() {
       <div className="sidebarWrapper">
         <div className="sidebarMenu">
           <h3 className="sidebarTitle">Companies</h3>
+          <ul className="sidebarList">
+            <Link to="/compSearch1" className="link">
+            <li className="sidebarListItem active">
+              <LineStyle className="sidebarIcon" />
+                Overview
+            </li>
+            </Link>
+            <Link to="/compcompanies" className="link">
+              <li className="sidebarListItem">
+                <Storefront className="sidebarIcon" />
+                Compare companies
+              </li>
+            </Link>
+            <Link to="/ranking" className="link">
+            <li className="sidebarListItem">
+              <BarChart className="sidebarIcon" />
+              Ranking Char
+            </li>
+            </Link>
+          </ul>
         </div>  
         <div className="sidebarMenu">
           <h3 className="sidebarTitle">Contacs</h3>
@@ -28,7 +48,7 @@ export default function Sidebar() {
         <div className="sidebarMenu">
           <h3 className="sidebarTitle">Investment</h3>
           <ul className="sidebarList">
-            <Link to="/newcompsearch" className="link">
+            <Link to="/invesSearch" className="link">
             <li className="sidebarListItem active">
               <LineStyle className="sidebarIcon" />
                 Overview

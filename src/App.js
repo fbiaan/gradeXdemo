@@ -13,10 +13,15 @@ import Ranking from "./pages/ranking/Ranking";
 import Overview from "./pages/overview/Overview";
 import CompSearch from "./pages/companySearch/CompanySearch"
 import NewCompSearch from "./pages/companySearch/cmpSearch"
-
+import CompSearch1 from "./pages/companySearch/Searchcomp1"
 import Splash from "./pages/company/NewComp"
 import CompareCompanies from "./pages/compareCompanies/CompCompanies"
 import Rankinglist from "./pages/ranking/Rankinglist"
+import OverCompLnk from "./pages/overview/OverCompani"
+
+import SearchInves from "./pages/investment/SearchInves"
+import OverInvesLnk from "./pages/investment/OverInves"
+
 
 function App() {
   return (
@@ -67,6 +72,21 @@ function App() {
           <Route path="/rankinglist">
             <Rankinglist/>
           </Route>
+          <Route path="/compSearch1">
+            <CompSearch1/>
+          </Route>
+          <Route path="/overcomp/:productId">
+            <OverCompLnk/>
+          </Route>
+          <Route path="/invesSearch">
+            <SearchInves/>
+          </Route>
+          <Route path="/overinves/:productId">
+            <OverInvesLnk/>
+          </Route>
+
+
+
         </Switch>
       </div>
     </Router>
