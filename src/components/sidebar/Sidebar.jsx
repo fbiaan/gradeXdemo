@@ -19,15 +19,8 @@ export default function Sidebar() {
   return (
     <div className="sidebar">
       <div className="sidebarWrapper">
-        <div className="sidebarMenu">
-          <h3 className="sidebarTitle">Companies</h3>
-          <ul className="sidebarList">
-            <Link to="/compSearch1" className="link">
-            <li className="sidebarListItem active">
-              <LineStyle className="sidebarIcon" />
-                Overview
-            </li>
-            </Link>
+      <div className="sidebarMenu">
+          <h3 className="sidebarTitle">Intellingence</h3>
             <Link to="/compcompanies" className="link">
               <li className="sidebarListItem">
                 <Storefront className="sidebarIcon" />
@@ -40,6 +33,22 @@ export default function Sidebar() {
               Ranking Char
             </li>
             </Link>
+            <Link to="/rankinglist" className="link">
+            <li className="sidebarListItem">
+              <BarChart className="sidebarIcon" />
+              Ranking List
+            </li>
+            </Link>
+          </div>
+        <div className="sidebarMenu">
+          <h3 className="sidebarTitle">Companies</h3>
+          <ul className="sidebarList">
+            <Link to="/compSearch1" className="link">
+            <li className="sidebarListItem active">
+              <LineStyle className="sidebarIcon" />
+                Overview
+            </li>
+            </Link>
           </ul>
         </div>    
         <div className="sidebarMenu">
@@ -49,24 +58,6 @@ export default function Sidebar() {
             <li className="sidebarListItem active">
               <LineStyle className="sidebarIcon" />
                 Overview
-            </li>
-            </Link>
-            <Link to="/compcompanies" className="link">
-              <li className="sidebarListItem">
-                <Storefront className="sidebarIcon" />
-                Compare companies
-              </li>
-            </Link>
-            <Link to="/ranking" className="link">
-            <li className="sidebarListItem">
-              <BarChart className="sidebarIcon" />
-              Ranking Chart
-            </li>
-            </Link>
-            <Link to="/rankinglist" className="link">
-            <li className="sidebarListItem">
-              <BarChart className="sidebarIcon" />
-              Ranking List
             </li>
             </Link>
             <Link to="/" className="link">
@@ -84,18 +75,6 @@ export default function Sidebar() {
               <li className="sidebarListItem active">
                 <LineStyle className="sidebarIcon" />
                   Overview
-              </li>
-              </Link>
-              <Link to="/compcompanies" className="link">
-                <li className="sidebarListItem">
-                  <Storefront className="sidebarIcon" />
-                  Compare companies
-                </li>
-              </Link>
-              <Link to="/ranking" className="link">
-              <li className="sidebarListItem">
-                <BarChart className="sidebarIcon" />
-                Ranking Char
               </li>
               </Link>
             </ul>          
@@ -117,49 +96,6 @@ export default function Sidebar() {
                 Overview
             </li>
             </Link>
-        </div>
-        <div className="sidebarMenu">
-          <h3 className="sidebarTitle">----------</h3>
-        </div>
-        <div className="sidebarMenu">
-          <h3 className="sidebarTitle">Future</h3>
-          <ul className="sidebarList">
-            <Link to="/users" className="link">
-              <li className="sidebarListItem">
-                <PermIdentity className="sidebarIcon" />
-                Intelligence
-              </li>
-            </Link>
-            
-            <Link to="/compsearch" className="link">
-              <li className="sidebarListItem">
-                <AttachMoney className="sidebarIcon" />
-                Transactions
-              </li>
-            </Link>
-            <li className="sidebarListItem">
-              <BarChart className="sidebarIcon" />
-              Reports
-            </li>
-            <Link to="/overview" className="link">
-            <li className="sidebarListItem">
-              <MailOutline className="sidebarIcon" />
-              Mail
-            </li>
-            </Link>
-            <Link to="/company" className="link">
-            <li className="sidebarListItem">
-              <DynamicFeed className="sidebarIcon" />
-              Feedback
-            </li>
-            </Link>
-            <Link to="/products" className="link">
-            <li className="sidebarListItem">
-              <ChatBubbleOutline className="sidebarIcon" />
-              Messages
-            </li>
-            </Link>            
-          </ul>
         </div>
         </div>
     </div>

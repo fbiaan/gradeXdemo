@@ -82,10 +82,7 @@ function OverComp() {
                     </table>
                 </div>
 
-                 <div>
-
-
-                </div>        
+                       
         </div>
     );
 

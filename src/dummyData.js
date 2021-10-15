@@ -1,18 +1,18 @@
 export const userData = [
     {
-      name: "CES",
+      name: "Jan",
       "Active User": 4000,
     },
     {
-      name: "EDU",
+      name: "Feb",
       "Active User": 3000,
     },
     {
-      name: "RIGO",
+      name: "Mar",
       "Active User": 5000,
     },
     {
-      name: "CES",
+      name: "Apr",
       "Active User": 7000,
     },
     {

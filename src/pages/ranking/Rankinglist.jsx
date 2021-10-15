@@ -8,9 +8,9 @@ const columns = [
   
   //getRowId={(row) => row._id}
   {field: 'company_id', headerName: 'ID'},
-  {field: 'company_name', headerName: 'Company', width: 200},
-  {field: 'country', headerName: 'Country', width: 100},
-  {field: 'score', headerName: 'Score', width: 100, sorteable: 'asc'},
+  {field: 'company_name', headerName: 'Company', width: 300},
+  
+  {field: 'score', headerName: 'Score', width: 200, sorteable: 'asc'},
   {
     field: "logo_file",
     headerName: "Logo",
@@ -23,20 +23,7 @@ const columns = [
       );
     },
   },  
-  {
-    field: "action",
-    headerName: "Action",
-    width: 150,
-    renderCell: (params) => {
-      return (
-        <>
-          <Link to={"/splash/" + params.row.company_id}>
-            <button className="userListEdit">Edit</button>
-          </Link>         
-        </>
-      );
-    },
-  }
+  
 ];
 
 const DataTable = () => {
@@ -52,6 +39,7 @@ const DataTable = () => {
    
     .then((data) => data.json())
     .then((data) => setTableData(data))
+    
  })
 
 

@@ -19,6 +19,7 @@ export default function ProductList() {
     const [selectcomp2, setSelectcomp2]= useState();
     const [selectcri,setSelectcri] = useState();
     const [datagrilla,setDataGrilla ]= useState([]);
+    const [datagrilla2,setDataGrilla2 ]= useState([]);
     // datagirlal, tiene el jason
     const columns= [
         { title: 'COMPANY', field: 'COMPANY_NAME', width : "200" },
@@ -53,11 +54,30 @@ export default function ProductList() {
               console.log(error);
             })
           }
-        
-        const baseUrl3="http://168.181.186.118:9093/democompany/allcomp";
+        //console.log({selectcomp1}.value)
+        const param1 = selectcomp1
+        console.log(param1)
+        //const baseUrl3="http://localhost:8080/democompany/invesover?idcom=" + selectcomp1 
+        const baseUrl3="http://168.181.186.118:9093/democompany/invesover?idcom=" + selectcomp1 
+        //const baseUrl3="http://168.181.186.118:9093/democompany/allcomp";
           // agergar los paremtroo en la consta baseurl3
         buscarGrilla(baseUrl3)
     
+
+        const buscarGrilla2=async(url)=>{
+            await axios.get(url)
+            .then(response=>{
+                setDataGrilla2(response.data.return)
+            }).catch(error=>{
+              console.log(error);
+            })
+          }
+        //console.log({selectcomp1}.value)
+        //const baseUrl4="http://localhost:8080/democompany/invesover?idcom=" + selectcomp2
+        const baseUrl4="http://168.181.186.118:9093/democompany/invesover?idcom=" + selectcomp2
+        //const baseUrl3="http://168.181.186.118:9093/democompany/allcomp";
+          // agergar los paremtroo en la consta baseurl3
+        buscarGrilla2(baseUrl4)
 
     }
     
@@ -77,9 +97,7 @@ export default function ProductList() {
                             })
                         }
                     </select>
-                    <div>
-                        {selectcomp1}
-                    </div>
+                   
                     <select name="selectcomp2" value={selectcomp2} onChange={e => setSelectcomp2(e.target.value)}>
                         {
                             data2.map((company2) => {
@@ -87,30 +105,27 @@ export default function ProductList() {
                             })
                         }
                     </select>
-                    <div>
-                        {selectcomp2}
-                    </div>
+                    
                 </div>
                 <div>
                 <h3>Select Criteria :</h3>
                 <select name="selectcri" value={selectcri} onChange={e => setSelectcri(e.target.value)}>
-                    <option value="a">Investment</option>
+                    <option value="a" selected>Talent</option>
                     <option value="b">Teck Stack</option>
                     <option value="c">Digital Performance</option>
-                    <option value="d" selected>Talent</option>
+                    <option value="d">Investment</option>
                 </select>
-                    <div>
-                        {selectcri}
-                    </div>
+                    
                 </div>
                 <button onClick={clickBuscar}>Execute</button>
                 <div>
-                    <table className="tablaresultado">
+                <div style={{display: "flex"}}>
+                    <table className="styled-table">
                         <thead>
                             <tr>
                                 <th>Info</th>
-                                <th>copm1</th>
-                                <th>copm2</th>
+                                <th>COMP1</th>
+                                
                             </tr>
                         </thead>
                         <tbody>
@@ -118,15 +133,36 @@ export default function ProductList() {
                                 datagrilla.map((d) =>{
                                     return (
                                         <tr>
-                                            <td>{d.COMPANY_NAME}</td>
-                                            <td>{d.COMPANY_NAME}</td>
-                                            <td>{d.COMPANY_ID}</td>
+                                            <td>{d.OUTPUT_NAME}</td>
+                                            <td>{d.TEXT_VALUE}</td>
+                                            
                                         </tr>
                                     )
                                 } )  
                             }
                         </tbody>
                     </table>
+                    <table className="styled-table">
+                        <thead>
+                            <tr>
+                                <th>Info</th>
+                                <th>COMP2</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {
+                                datagrilla2.map((d) =>{
+                                    return (
+                                        <tr>
+                                            <td>{d.OUTPUT_NAME}</td>
+                                            <td>{d.TEXT_VALUE}</td>
+                                        </tr>
+                                    )
+                                } )  
+                            }
+                        </tbody>
+                    </table>
+                    </div>
                 </div>
                                 
             </div>

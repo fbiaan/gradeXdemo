@@ -44,7 +44,7 @@ const peticionGet=async()=>{
     return (
       <div className="ranking">
         
-          Ranking TOP 20   _
+          Ranking TOP 20  _ _
           <img src="https://insyteglobal.com/wp-content/uploads/2020/05/logo-insyte-global-small.png" alt=""  />
           <ResponsiveContainer width="100%" aspect={1 / 1}>
 

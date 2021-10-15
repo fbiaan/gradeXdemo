@@ -10,12 +10,6 @@ export default function Topbar() {
         <div className="topLeft">
           <span className="logo">GRADE - X</span>
         </div>
-        <div className="topLeft">
-        <Link to="/compSearch1" className="link">
-          <span className="sidebarMenu">Companies</span>
-        </Link>  
-        </div>
-
         <div className="topRight">
           <div className="topbarIconContainer">
             <NotificationsNone />

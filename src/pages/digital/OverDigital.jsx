@@ -30,8 +30,8 @@ function OverDigital() {
     }, [])
 
     const [teck, setInves]= useState([]);
-    const baseUrl2="http://localhost:8080/democompany/digiover?idcom=" + productId;
-//    const baseUrl2="http://168.181.186.118:9093/democompany/digiover?idcom=" + productId;
+//    const baseUrl2="http://localhost:8080/democompany/digiover?idcom=" + productId;
+    const baseUrl2="http://168.181.186.118:9093/democompany/digiover?idcom=" + productId;
 
     const peticionGet2=async()=>{
         await axios.get(baseUrl2)

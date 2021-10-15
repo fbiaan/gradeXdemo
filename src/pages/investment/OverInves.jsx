@@ -74,7 +74,7 @@ function OverInves() {
                                     return (
                                         <tr>
                                             <td>{d.OUTPUT_NAME}</td>
-                                            <td>{d.VALUE}</td>                                            
+                                            <td>{d.TEXT_VALUE}</td>                                            
                                         </tr>
                                     )
                                 } )  
